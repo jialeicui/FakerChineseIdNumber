@@ -2,7 +2,7 @@
 
 namespace FakerChineseIdCard\Test\Provider;
 
-use Faker\Generator;
+use Faker\Factory;
 use FakerChineseIdCard\Provider\Person;
 use PHPUnit\Framework\TestCase;
 
@@ -15,7 +15,7 @@ class PersonTest extends TestCase
 
     public function setUp()
     {
-        $faker = new Generator();
+        $faker = Factory::create('zh_CN');
         $faker->addProvider(new Person($faker));
         $this->faker = $faker;
     }

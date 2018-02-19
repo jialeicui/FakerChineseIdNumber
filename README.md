@@ -9,7 +9,7 @@ composer require jialeicui/faker-chinese-id-number
 ```php
 use FakerChineseIdCard\Provider\Person;
 
-$faker = Faker\Factory::create();
+$faker = Faker\Factory::create('zh_CN');
 $faker->addProvider(new Person($faker));
 $faker->idNumber;
 ```
