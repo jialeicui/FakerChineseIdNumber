@@ -2,7 +2,7 @@
 
 namespace FakerChineseIdCard\Provider;
 
-class Person extends \Faker\Provider\Person
+class Person extends \Faker\Provider\zh_CN\Person
 {
     /*
      * @link http://www.mca.gov.cn/article/sj/tjbz/a/2017/201801/201801151447.html

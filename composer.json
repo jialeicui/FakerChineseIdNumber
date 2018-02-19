@@ -2,7 +2,6 @@
   "name": "jialeicui/faker-chinese-id-number",
   "description": "Id number for Chinese based on fzaninotto/Faker",
   "type": "library",
-  "version": "0.1.0",
   "require": {
     "php": "^5.3.3 || ^7.0",
     "fzaninotto/faker": "^1.7"
