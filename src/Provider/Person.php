@@ -3259,9 +3259,11 @@ class Person extends \Faker\Provider\zh_CN\Person
         static $weight = array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2);
         static $check = array(1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2);
 
+        $off = 0;
         $sum = 0;
         foreach (str_split($mainPart) as $c) {
-            $sum += $weight[intval($c)];
+            $sum += intval($c) * $weight[$off];
+            $off++;
         }
         $ck = $check[$sum % 11];
 
