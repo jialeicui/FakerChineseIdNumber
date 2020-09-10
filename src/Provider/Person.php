@@ -3230,7 +3230,7 @@ class Person extends \Faker\Provider\zh_CN\Person
     );
 
     /**
-     * @link https://baike.baidu.com/item/居民身份证号码/3400358?fromtitle=身份证号码&fromid=2135487
+     * @link https://baike.baidu.com/item/居民身份证号码/3400358?fromtitle=身份证号码
      * @param \DateTime $birthdate
      * @param string    $gender
      *
@@ -3244,13 +3244,13 @@ class Person extends \Faker\Provider\zh_CN\Person
         $birthDateString = $birthdate->format('Ymd');
         switch (strtolower($gender)) {
             case static::GENDER_FEMALE:
-                $order = self::numberBetween(0, 998 / 2) * 2;
+                $order = self::numberBetween(100, 998 / 2) * 2;
                 break;
             case static::GENDER_MALE:
-                $order = self::numberBetween(0, 998 / 2) * 2 + 1;
+                $order = self::numberBetween(100, 998 / 2) * 2 + 1;
                 break;
             default:
-                $order = self::numberBetween(0, 999);
+                $order = self::numberBetween(100, 999);
         }
 
         $areaPrefix = self::randomElement(array_keys(self::$areaPrefix));
